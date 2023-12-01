@@ -6,7 +6,7 @@
 /*   By: lagonzal <lagonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 13:28:34 by lagonzal          #+#    #+#             */
-/*   Updated: 2023/12/01 14:05:37 by lagonzal         ###   ########.fr       */
+/*   Updated: 2023/12/01 17:44:56 by lagonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,9 @@ int	main(void)
 	}
 	sum = 0;
 	while (fgets(line, sizeof(line), file))
+	{
 		sum += (find_first_number(line) * 10) + (find_last_number(line));
+		free(line);
+	}
 	printf("final value is %d\n", sum);
 }

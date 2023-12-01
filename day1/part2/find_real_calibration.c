@@ -6,7 +6,7 @@
 /*   By: lagonzal <lagonzal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 14:02:23 by lagonzal          #+#    #+#             */
-/*   Updated: 2023/12/01 17:38:50 by lagonzal         ###   ########.fr       */
+/*   Updated: 2023/12/01 17:44:39 by lagonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,8 @@ int	main(void)
 	while (fgets(line, sizeof(line), file))
 	{
 		sum += (find_numbers(line));
+		free(line);
 	}
+	fclose(file);
 	printf("%d\n", sum);
 }
