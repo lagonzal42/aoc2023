@@ -99,5 +99,6 @@ int main(void)
 	{
 		sum += check_line(line);
 	}
+	fclose(file);
 	printf("%d\n", sum);
 }

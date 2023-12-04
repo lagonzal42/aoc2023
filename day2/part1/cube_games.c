@@ -90,5 +90,6 @@ int main(void)
 			sum += index;
 		index++;
 	}
+	fclose(file);
 	printf("%d\n", sum);
 }
